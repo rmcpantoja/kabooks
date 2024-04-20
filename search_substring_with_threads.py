@@ -424,10 +424,10 @@ def search_substring(transcript_file,complete_text_file, output_file, search_typ
 
     output_f = open(output_file, "w")
 
-    with open(transcript_file) as f:
+    with open(transcript_file, encoding='utf-8') as f:
         transcripts_text = f.readlines()
 
-    with open(complete_text_file) as f:
+    with open(complete_text_file, encoding='utf-8') as f:
         book_text = f.read()
 
     # Cleaning complete text_tools

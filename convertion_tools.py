@@ -15,7 +15,8 @@ def convert_mp3_to_wav(input, output, sample_rate):
     for input_file in glob.glob(input + '/*.mp3'):
         filename = basename(input_file).split('.')[0]
         output_file = join(output, filename + '.wav')
-        command_line = "ffmpeg -i {} -ar {}  {}" .format(input_file, int(sample_rate), output_file)
+        command_line = f'ffmpeg -i "{input_file}" -ar {int(sample_rate)}  "{output_file}"'
+
 
         r = subprocess.call(command_line, shell=True)
         if r != 0:

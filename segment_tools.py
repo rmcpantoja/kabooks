@@ -142,7 +142,8 @@ def build_segments(input_dir, output_dir, sample_rate=24000, min_duration=3, max
     total_duration += duration
 
     # Create records for the segments
-    output_filename = output_filename  if output_filename else file_id
+    #output_filename = output_filename  if output_filename else file_id
+    output_filename = i
     j = int(output_filename_id)
     for s in segments:
       all_segments.append(s)

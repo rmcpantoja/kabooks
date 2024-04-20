@@ -76,8 +76,8 @@ def transcribe_files(input_dir, output_filepath, language):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-b', '--base_dir', default='./')
-    parser.add_argument('-i', '--input', default='./output/wavs', help='Wavs folder')
-    parser.add_argument('-o', '--output', default='./output/transcription.csv', help='Name of csv output file')
+    parser.add_argument('-i', '--input_dir', default='./output/wavs', help='Wavs folder')
+    parser.add_argument('-o', '--output_file', default='./output/transcription.csv', help='Name of csv output file')
     parser.add_argument('-l', '--language', default='pt', help='du, en, fr, ge, it, pl, pt')
     args = parser.parse_args()
 
